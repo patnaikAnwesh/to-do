@@ -1,0 +1,160 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #9a9c9f; /* Light background color for better contrast */
+}
+
+.App {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center content */
+}
+
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px; /* Maximum width for the board */
+}
+
+.display-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.display-options select {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Light border */
+  background-color: #ffffff; /* White background for dropdowns */
+  transition: border 0.2s;
+}
+
+.display-options select:hover {
+  border: 1px solid #0073e6; /* Change border color on hover */
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px; /* Padding around columns */
+}
+
+.column {
+  background-color: #1a1f29;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px; /* Fixed width for better alignment */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.column:hover {
+  transform: translateY(-5px); /* Raise column on hover */
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1b2022; /* Dark text color */
+}
+
+.tickets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket-card {
+  background-color: #dfe0f1; /* Light blue for ticket cards */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.ticket-id {
+  font-size: 12px;
+  color: #6cc3d0; /* Gray text */
+  margin-bottom: 4px;
+}
+
+.ticket-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111213; /* Darker blue for better visibility */
+  margin-bottom: 8px;
+}
+
+.ticket-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket-options span {
+  font-size: 20px;
+  color: #9ca3af; /* Light gray for options */
+  cursor: pointer;
+}
+
+.ticket-tag {
+  font-size: 12px;
+  color: #333;
+  background-color: #e0e0e0; /* Light gray for tags */
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* White initials */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%; /* Circle shape */
+  margin-left: auto; /* Align avatar to the right */
+}
+.display-options {
+  position: relative; /* Position for absolute dropdown */
+  margin-bottom: 20px; /* Space below options */
+  
+}
+
+.dropdown-menu {
+  position: absolute; /* Position dropdown relative to the label */
+  background-color: rgb(196, 202, 216); /* Background for dropdown */
+  border: 1px solid #1e1d1d; /* Border for dropdown */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding inside dropdown */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.grouping-dropdown,
+.ordering-dropdown {
+  margin-bottom: 15px; /* Space between dropdowns */
+}
+
+.grouping-dropdown label,
+.ordering-dropdown label {
+  display: block; /* Make labels block to stack */
+  margin-bottom: 5px; /* Space below labels */
+  
+}
